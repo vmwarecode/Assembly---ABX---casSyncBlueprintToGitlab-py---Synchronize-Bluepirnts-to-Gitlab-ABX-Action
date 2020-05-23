@@ -1,0 +1,34 @@
+
+---
+exportVersion: "1"
+# original exportId: "8a5ea9ae71c2b18901721c8f4b750610"
+exportId: "8a5ea9ae71c2b18901721c8f4b750500"
+name: "casSyncBlueprintToGitlab-py (Git)"
+runtime: "python"
+entrypoint: "handler"
+description: "CAS - Sync Blueprint to Gitlab"
+inputs:
+  gitProjectIdIn: "<Required>"
+  blueprintIdABXIn: "<Optional>"
+  awsSmRegionNameIn: "<Optional>"
+  cspRefreshTokenIn: "<Required>"
+  gitPrivateTokenIn: "<Required>"
+  blueprintNameABXIn: "<Optional>"
+  gitProjectFolderIn: "<Required>"
+  blueprintVersionABXIn: "<Optional>"
+  runOnCustomPropertyIn: "<Optional>"
+  runOnBlueprintOptionIn: "<Optional>"
+  awsSmCspTokenSecretIdIn: "<Optional>"
+  awsSmGitTokenSecretIdIn: "<Optional>"
+  runOnCustomPorpertyMatchABXIn: "<Optional>"
+  runOnBlueprintOptionMatchABXIn: "<Optional>"
+  actionOptionAcceptPayloadInputIn: "True"
+  actionOptionRunOnCustomPropertyIn: "False"
+  actionOptionRunOnBlueprintOptionIn: "True"
+  actionOptionUseAwsSecretsManagerIn: "False"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+dependencies: "pyyaml\nboto3\nrequests\npython-gitlab\n"
+actionType: "SCRIPT"
+provider: "aws"
+memoryInMB: 300
